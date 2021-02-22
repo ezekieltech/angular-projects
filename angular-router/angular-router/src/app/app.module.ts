@@ -8,6 +8,8 @@ import { CoursesComponent } from './courses/courses.component';
 import { AboutComponent } from './about/about.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CourseCardsComponent } from './courses/course-cards.component';
+import { CoursesCategoryComponent } from './courses/courses-category.component';
+import { SideMenuComponent } from './courses/side-menu.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { CourseCardsComponent } from './courses/course-cards.component';
     HomeComponent,
     CoursesComponent,
     AboutComponent,
-    CourseCardsComponent
+    CourseCardsComponent,
+    CoursesCategoryComponent,
+    SideMenuComponent
   ],
   imports: [
     BrowserModule,
