@@ -33,7 +33,13 @@ const routes: Routes = [
             path: '',
             outlet: 'sidemenu',
             component: SideMenuComponent
+            },
+          {
+            path: ':id',
+            outlet: 'sidemenu',
+            component: SideMenuComponent
             }
+
         ]
     },
     {
@@ -49,7 +55,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,  { enableTracing: true })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

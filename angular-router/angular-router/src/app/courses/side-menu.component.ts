@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import {map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-side-menu',
@@ -8,13 +10,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SideMenuComponent implements OnInit {
 
-  constructor(route: ActivatedRoute) {
-    // route.params.subscribe(params => console.log("side menu id parameter", params)
+  constructor(private route: ActivatedRoute) {
     // todo inject a service and get the data
     // todo load the data before creating the component using a Router Resolver
     }
 
   ngOnInit(): void {
+    const heroId = this.route.snapshot.paramMap.get('id');
+    console.log('side menu category',heroId)
   }
 
 }
