@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-course-cards',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseCardsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+  }
+
+  navigate(path){
+    this.router.navigate([{outlets: {primary: path, sidemenu:path}}], {relativeTo: this.route});
   }
 
 }
