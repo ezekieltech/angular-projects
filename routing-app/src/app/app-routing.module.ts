@@ -24,6 +24,7 @@ const routes: Routes = [
   },
   { path: 'second-component', component: SecondComponent },
   { path: '',   redirectTo: '/first-component', pathMatch: 'full' }, // redirect to `first-component`
+  { path: 'first-component/:id',  component: SecondComponent}, // redirect to `first-component`
   { path: '**', component: PAGENOTFOUNDComponent }
 ];
 
