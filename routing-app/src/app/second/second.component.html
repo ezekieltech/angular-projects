@@ -6,3 +6,17 @@
     <li><a (click)="goToFirst()">Click Here: Relative Route to first component</a></li>
   </ul>
 </nav>
+
+<div *ngIf='hero'>
+  <h3>Hero</h3>
+  <ul>
+    <li>
+      <a  routerLink="/first-component" (click)='gotoItems(hero)'>
+        The hero id from first component is {{heroId}}:
+        Harcoded hero for practice purpose is ({{hero.id}}, {{hero.name}})
+      </a>
+    </li>
+  </ul>
+</div>
+
+<button (click)="goBack()">go back</button>
